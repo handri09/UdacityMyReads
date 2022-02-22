@@ -11,7 +11,6 @@ class BooksApp extends Component {
       myBooks: [],
       searchRes: [],
    }
-
    componentDidMount= () => {
       BooksAPI.getAll()
          .then((books) => {
@@ -19,7 +18,6 @@ class BooksApp extends Component {
                myBooks : books })
          })
    }
-
    updateBook = (book, shelf) => {
       BooksAPI.update(book, shelf)
       .then(()=>{
